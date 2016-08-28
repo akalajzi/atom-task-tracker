@@ -4,5 +4,87 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.task-tracker {
+@tt-task-height: 50px;
+@tt-task-border-radius: 0px;
+
+task-tracker {
+  width: 400px;
+  overflow-y: scroll;
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+
+    h1 {
+      flex: 1;
+      margin: 10px;
+      padding: 0;
+    }
+
+    button {
+      margin: 10px;
+    }
+
+    margin-bottom: 0.5rem;
+  }
+
+  .tasklist {
+    .task {
+      margin: 5px 0px;
+      padding: 10px;
+      background-color: @button-background-color;
+      border-radius: @tt-task-border-radius;
+      cursor: pointer;
+      height: @tt-task-height;
+      font-size: 10px;
+
+      &.odd {
+        background-color: @button-background-color;
+      }
+      &.even {
+        background-color: @button-background-color-hover;
+      }
+
+      &:hover {
+        background-color: @button-background-color-selected;
+      }
+
+      .task-title {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .task-controls {
+        float: right;
+
+        button.tt-task-delete {
+          &:hover {
+            background-image: none;
+            background-color: @background-color-error;
+          }
+        }
+      }
+    }
+
+    .new-task-btn {
+      border: 1px dashed @text-color-subtle;
+      border-radius: @tt-task-border-radius;
+      text-align: center;
+      width: 100%;
+      height: @tt-task-height;
+      padding: 10px;
+      color: @text-color-subtle;
+      cursor: pointer;
+
+      &:hover {
+        color: @text-color;
+        border: 1px dashed @text-color;
+      }
+
+      span.add-new-task {
+        font-size: 18px;
+      }
+    }
+  }
+
 }
