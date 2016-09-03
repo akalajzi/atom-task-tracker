@@ -12,6 +12,7 @@ task-tracker {
   overflow-y: scroll;
 
   .pull-right { float: right; }
+  .clickable { cursor: pointer; }
 
   .header {
     display: flex;
@@ -144,6 +145,10 @@ task-tracker {
   }
 
   .active-task {
+    .controls {
+      padding-top: 4px;
+    }
+
     .task-body {
       .at-description {
         padding-bottom: 5px;
@@ -182,6 +187,7 @@ task-tracker {
     .track-button {
       float:left;
       padding-right: 10px;
+      color: @text-color-success;
     }
 
     .cpf-name {
@@ -191,7 +197,17 @@ task-tracker {
         color: @text-color-subtle;
       }
     }
+  }
 
+  .at-files-list { min-height: 80px;}
+
+  .empty-container {
+    // background-color: @inset-panel-background-color;
+    padding: 30px 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: @text-color-subtle;
   }
 
   .current-pathname,
@@ -203,5 +219,25 @@ task-tracker {
   .filelist-filename {
     display: inline-block;
   }
+
+  .at-filetree {
+    margin-left: 12px;
+    border-left: 1px solid @text-color-subtle;
+
+    .tree-dash {
+      display: inline-block;
+      border-bottom: 1px solid @text-color-subtle;
+      width: 7px;
+      margin-bottom: 5px;
+      margin-right: 3px;
+    }
+
+    .at-files-dirname { padding: 2px 0px; }
+
+    .at-files-items {
+      padding-left: 10px;
+    }
+  }
+
 
 }
