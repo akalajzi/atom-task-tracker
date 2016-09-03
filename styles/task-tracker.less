@@ -173,4 +173,35 @@ task-tracker {
     }
   }
 
+  .currently-editing-file {
+    background-color: @inset-panel-background-color;
+    padding: 5px 10px;
+    border: 1px solid @inset-panel-border-color;
+    margin-bottom: 5px;
+
+    .track-button {
+      float:left;
+      padding-right: 10px;
+    }
+
+    .cpf-name {
+      margin-left: 10px;
+
+      .cpf-title {
+        color: @text-color-subtle;
+      }
+    }
+
+  }
+
+  .current-pathname,
+  .filelist-pathname {
+    color: @text-color-subtle;
+    display:inline-block;
+  }
+  .current-filename,
+  .filelist-filename {
+    display: inline-block;
+  }
+
 }
