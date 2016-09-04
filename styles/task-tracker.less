@@ -5,15 +5,22 @@
 @import "ui-variables";
 
 @tt-task-height: 50px;
-@tt-width: 400px;
 
 task-tracker {
-  width: @tt-width;
   overflow-y: scroll;
 
   .pull-right { float: right; }
   .clickable { cursor: pointer; }
   .hidden { display: none; }
+
+  &.tt-narrow {
+    width: 300px;
+    .task-title { width: 220px; }
+  }
+  &.tt-wide {
+    width: 400px;
+    .task-title { width: 320px; }
+  }
 
   .header {
     display: flex;
@@ -33,33 +40,55 @@ task-tracker {
     border-bottom: 2px solid @tab-border-color;
   }
 
+  .dd-header-dropdown {
+    position: relative;
+
+    .dd-menu {
+      position: absolute;
+      background-color: @overlay-background-color;
+      z-index: 9999;
+      right: 10px;
+      top: 38px;
+
+      .dd-menu-item {
+        padding: 8px 20px;
+        border: 1px solid @overlay-border-color;
+        .clickable;
+
+        &:hover {
+          color: @text-color-selected;
+          background-color: @background-color-selected;
+        }
+      }
+
+      .dd-menu-divider {
+        height: 3px;
+        background-color: @text-color;
+      }
+    }
+  }
+
   .tasklist {
     .task {
       margin: 5px 0px;
       padding: 10px;
-      background-color: @button-background-color;
-      border-radius: @component-border-radius;
-      cursor: pointer;
+      background-color: @tab-background-color;
+      border: 1px solid @tab-border-color;
       min-height: @tt-task-height;
       overflow: hidden;
-      font-size: 10px;
-
-      &.odd {
-        background-color: @button-background-color;
-      }
-      &.even {
-        background-color: @button-background-color-hover;
-      }
+      font-size: @font-size;
+      .clickable;
 
       &:hover {
-        background-color: @button-background-color-selected;
+        color: @text-color-selected;
+        background-color: @background-color-selected;
       }
 
       .task-title {
         float: left;
-        font-size: 14px;
+        font-size: @font-size + 4px;
         font-weight: bold;
-        width: @tt-width - 80px;
+        // width: @tt-width - 80px;
       }
       .task-controls {
         float: right;
