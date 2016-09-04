@@ -222,8 +222,7 @@ task-tracker {
   }
 
   .at-filetree {
-    margin-left: 12px;
-    border-left: 1px solid @text-color-subtle;
+    margin-left: 6px;
 
     .tree-dash {
       display: inline-block;
@@ -231,6 +230,19 @@ task-tracker {
       width: 7px;
       margin-bottom: 5px;
       margin-right: 3px;
+    }
+
+    .at-filetree-dir {
+      margin-left: 6px;
+      border-left: 1px solid @text-color-subtle;
+      // border-right: 1px solid @text-color-subtle;
+    }
+
+    .at-project-name {
+      font-size: @font-size + 2;
+      font-weight: strong;
+      padding: 8px 0px;
+      // border: 1px solid @text-color-subtle;
     }
 
     .at-files-dirname { padding: 2px 0px; }
