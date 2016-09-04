@@ -32,7 +32,7 @@ task-tracker {
       padding: 0;
     }
 
-    button {
+    .controls {
       margin: 10px;
     }
 
@@ -42,18 +42,27 @@ task-tracker {
 
   .dd-header-dropdown {
     position: relative;
+    float: left;
 
     .dd-menu {
       position: absolute;
       background-color: @overlay-background-color;
       z-index: 9999;
-      right: 10px;
-      top: 38px;
+      right: 4px;
+      top: 28px;
 
       .dd-menu-item {
-        padding: 8px 20px;
+        padding: 8px 20px 8px 12px;
         border: 1px solid @overlay-border-color;
         .clickable;
+
+        span {
+          display: inline-flex;
+        }
+
+        .blank-icon {
+          padding-left: 21px;
+        }
 
         &:hover {
           color: @text-color-selected;
