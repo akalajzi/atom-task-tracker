@@ -207,6 +207,7 @@ task-tracker {
       }
     }
 
+    // TODO: this is shit now, make separate class
     .at-files,
     .at-todo {
       padding-bottom: 10px;
@@ -222,6 +223,20 @@ task-tracker {
         display: inline-block;
       }
     }
+
+    .at-todo {
+      background-color: @inset-panel-background-color;
+      padding: 5px 10px;
+      border: 1px solid @inset-panel-border-color;
+      margin-bottom: 5px;
+
+      .todo-refresh-control {
+        float:left;
+        padding-right: 10px;
+        color: @text-color-success;
+      }
+    }
+
   }
 
   .currently-editing-file {
