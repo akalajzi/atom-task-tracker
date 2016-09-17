@@ -1,10 +1,6 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
 @import "ui-variables";
 
-@tt-task-height: 50px;
+@tt-task-height: 60px;
 
 task-tracker {
   overflow-y: scroll;
@@ -32,8 +28,17 @@ task-tracker {
       padding: 0;
     }
 
+    .title {
+      flex: 1;
+      margin: 8px;
+      padding: 5px 0px;
+      font-size: @font-size + 6px;
+      // font-weight: bold;
+      line-height: @font-size + 6px;
+    }
+
     .controls {
-      margin: 10px;
+      margin: 8px;
     }
 
     margin-bottom: 0.5rem;
@@ -98,7 +103,6 @@ task-tracker {
         float: left;
         font-size: @font-size + 4px;
         font-weight: bold;
-        // width: @tt-width - 80px;
       }
       .task-controls {
         float: right;
@@ -125,7 +129,7 @@ task-tracker {
       text-align: center;
       width: 100%;
       height: @tt-task-height;
-      padding: 10px;
+      padding: 15px;
       color: @text-color-subtle;
       cursor: pointer;
 
