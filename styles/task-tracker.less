@@ -2,6 +2,9 @@
 
 @tt-task-height: 60px;
 
+@text-color-clog: #807C61;
+@text-color-fixme: #734E4E;
+
 task-tracker {
   overflow-y: scroll;
 
@@ -322,6 +325,9 @@ task-tracker {
       .todo-item {
         color: @text-color-subtle;
         padding-left: 20px;
+
+        &.clog { color: @text-color-clog; }
+        &.fixme { color: @text-color-fixme; }
 
         &:hover {
           color: @text-color-selected;
