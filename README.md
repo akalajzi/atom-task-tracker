@@ -4,6 +4,4 @@ Task tracker allows you to create tasks inside Atom, manage files tracked for ea
 
 See screenshots for more info.
 
-![task-tracker task list screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/task-list.jpg)
-
-![task-tracker active task screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/active-task.jpg)
+![task-tracker task list screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/task-list.jpg) ![task-tracker active task screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/active-task.jpg)
