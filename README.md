@@ -1,5 +1,9 @@
-# task-tracker
+# Task Tracker package
 
-It does nothing. Yet.
+Task tracker allows you to create tasks inside Atom, manage files tracked for each task by replicating file tree for easier navigation. It also shows you git status of those files, along with all TODOs, FIXMEs and leftover console.logs in those files.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+See screenshots for more info.
+
+![task-tracker task list screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/task-list.jpg)
+
+![task-tracker active task screenshot](https://raw.githubusercontent.com/akalajzi/atom-task-tracker/master/resources/active-task.jpg)
